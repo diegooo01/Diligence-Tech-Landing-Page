@@ -16,16 +16,16 @@ export default {
       Con <span class="orange-marker">Diligence Tech</span> tenemos planeado facilitar <br> la mayoría de tus obligaciones financieras.
     </p>
     <div class="benefits-information">
-      <benefit-group icon="/public/benefits-icons/org-icon.png">
+      <benefit-group icon="/benefits-icons/org-icon.png">
         Organización <br> de proyectos
       </benefit-group>
-      <benefit-group icon="/public/benefits-icons/insert-icon.png">
+      <benefit-group icon="/benefits-icons/insert-icon.png">
         Fácil inserción <br> de datos
       </benefit-group>
-      <benefit-group icon="/public/benefits-icons/diligence-icon.png">
+      <benefit-group icon="/benefits-icons/diligence-icon.png">
         Diligencia rápida <br> y eficiente
       </benefit-group>
-      <benefit-group icon="/public/benefits-icons/chat-icon.png">
+      <benefit-group icon="/benefits-icons/chat-icon.png">
         Interacción <br> profesional
       </benefit-group>
     </div>
