@@ -29,12 +29,12 @@ export default {
         </a>
       </div>
       <div class="social-media-icon">
-        <a href="https://x.com/" target="_blank">
+        <a href="https://www.instagram.com/" target="_blank">
           <img src="/public/social-media-icons/instagram-icon.png" alt="Instagram icon" width="40">
         </a>
       </div>
       <div class="social-media-icon">
-        <a href="https://x.com/" target="_blank">
+        <a href="https://www.linkedin.com/feed/" target="_blank">
           <img src="/public/social-media-icons/linkedin-icon.png" alt="LinkedIn icon" width="30">
         </a>
       </div>
