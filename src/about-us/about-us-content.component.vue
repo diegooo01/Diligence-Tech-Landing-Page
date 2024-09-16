@@ -1,8 +1,26 @@
 <script>
+import { onMounted } from "vue";
 
 export default {
-  name: "about-us-content"
-}
+  name: "about-us-content",
+  setup() {
+    onMounted(() => {
+      const aboutUsSection = document.querySelector(".about-us");
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fade-in");
+            // Detiene la observación después de que el efecto se aplique
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+
+      observer.observe(aboutUsSection);
+    });
+  }
+};
 </script>
 
 <template>
@@ -11,7 +29,7 @@ export default {
       <div class="about-us-text">
         <h1>NOSOTROS</h1>
         <p>
-          Somos <span class="orange-marker">MobilLoom</span> una startup en crecimiento que mediante <span class="orange-marker">Diligence Tech</span> promovemos una mejoría en los procesos financieros ya existentes.
+          Somos <span class="orange-marker">MobilLoom</span>, una startup en crecimiento que mediante <span class="orange-marker">Diligence Tech</span> promovemos una mejoría en los procesos financieros ya existentes.
         </p>
         <p>
           Contamos con un equipo altamente capacitado en <span class="orange-marker">tecnología financiera</span> y desarrollo móvil que harán de esta iniciativa una <span class="orange-marker">verdadera revolución</span> para la industria financiera.
@@ -22,41 +40,53 @@ export default {
       </div>
     </div>
   </div>
-
 </template>
 
 <style scoped>
 
-.orange-marker{
-  color:#D6773D;
+/* Efecto de desvanecido */
+.about-us {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
 }
 
-.about-us-content{
+.about-us.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.orange-marker {
+  color: #D6773D;
+}
+
+.about-us-content {
   background-color: #000;
   padding: 2rem 8rem 3rem 8rem;
 }
 
-.about-us-text{
+.about-us-text {
   width: 50%;
   align-content: center;
 }
 
-.about-us-text h1{
+.about-us-text h1 {
   color: #D6773D;
   font-size: 3rem;
   padding-bottom: 3rem;
 }
 
-.about-us-text p{
+.about-us-text p {
   font-size: 1.25rem;
   padding-bottom: 1.15rem;
 }
 
-.about-us{
+.about-us {
   display: flex;
 }
 
-.about-us-image{
+.about-us-image {
   width: 50%;
   display: flex;
   justify-content: center;
@@ -64,36 +94,34 @@ export default {
   margin: 0 auto;
 }
 
-.us-img{
+.us-img {
   width: 90%;
 }
 
-@media screen and (max-width: 950px){
-  .about-us-content{
+@media screen and (max-width: 950px) {
+  .about-us-content {
     padding: 4rem 3rem;
   }
 
-  .about-us{
+  .about-us {
     display: flex;
     flex-direction: column;
   }
 
-  .about-us-text{
+  .about-us-text {
     width: 100%;
   }
 
-  .about-us-image{
+  .about-us-image {
     width: 100%;
   }
 
-  .us-img{
+  .us-img {
     width: 75%;
   }
 
-  .about-us-text h1{
+  .about-us-text h1 {
     font-size: 2.2rem;
   }
-
 }
-
 </style>
