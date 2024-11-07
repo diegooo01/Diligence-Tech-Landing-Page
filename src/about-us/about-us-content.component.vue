@@ -146,7 +146,8 @@ export default {
   }
 
   .iframe-wrapper {
-    width: 90%;
+    width: 100%;
+    height: 180px; /* Alto específico */
   }
 }
 </style>

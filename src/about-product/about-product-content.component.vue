@@ -57,11 +57,12 @@ export default {
     padding: 4rem 3rem;
   }
   .about-product-content h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .iframe-wrapper {
-    width: 85%;
+    width: 100%;
+    height: 180px; /* Alto específico */
   }
 }
 </style>
