@@ -35,8 +35,10 @@ export default {
           Contamos con un equipo altamente capacitado en <span class="orange-marker">tecnología financiera</span> y desarrollo móvil que harán de esta iniciativa una <span class="orange-marker">verdadera revolución</span> para la industria financiera.
         </p>
       </div>
-      <div class="about-us-image">
-        <img src="/public/hero-section/us-image.png" alt="Us Image" class="us-img">
+      <div class="iframe-wrapper">
+        <iframe width="600" height="335" src="https://www.youtube.com/embed/MTmMTcVibNw?si=yKZCu_ycrFt-CkAI&amp;start=01"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -44,11 +46,29 @@ export default {
 
 <style scoped>
 
-/* Efecto de desvanecido */
+.iframe-wrapper {
+  position: relative;
+  width: 50%;  /* Ancho máximo */
+  height: 350px; /* Alto específico */
+  margin: auto; /* Centrado */
+  overflow: hidden;
+  background: #000;
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 .about-us {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+  gap: 1rem;
 }
 
 .about-us.fade-in {
@@ -58,12 +78,12 @@ export default {
 
 
 .orange-marker {
-  color: #D6773D;
+  color: #fff;
 }
 
 .about-us-content {
-  background-color: #000;
-  padding: 2rem 8rem 3rem 8rem;
+  background-color: #D6773D;
+  padding: 4rem 8rem 4rem 8rem;
 }
 
 .about-us-text {
@@ -72,7 +92,7 @@ export default {
 }
 
 .about-us-text h1 {
-  color: #D6773D;
+  color: #000;
   font-size: 3rem;
   padding-bottom: 3rem;
 }
@@ -80,6 +100,7 @@ export default {
 .about-us-text p {
   font-size: 1.25rem;
   padding-bottom: 1.15rem;
+  color: #000;
 }
 
 .about-us {
@@ -122,6 +143,10 @@ export default {
 
   .about-us-text h1 {
     font-size: 2.2rem;
+  }
+
+  .iframe-wrapper {
+    width: 90%;
   }
 }
 </style>

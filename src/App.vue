@@ -7,10 +7,12 @@ import BenefitsContent from "./benefits/benefits-content.component.vue";
 import PlansContent from "./plans/plans-content.component.vue";
 import ContactUsContent from "./contact-us/contact-us-content.component.vue";
 import FooterContent from "./public/components/footer-content.component.vue";
+import AboutProductContent from "./about-product/about-product-content.component.vue";
 
 export default defineComponent({
     name: "App",
     components: {
+      AboutProductContent,
       FooterContent,
       ContactUsContent,
       PlansContent,
@@ -39,6 +41,7 @@ export default defineComponent({
     <div id="plans" class="section">
       <PlansContent></PlansContent>
     </div>
+    <AboutProductContent></AboutProductContent>
     <div id="contact-us" class="section">
       <ContactUsContent></ContactUsContent>
     </div>
