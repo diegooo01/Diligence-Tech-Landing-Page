@@ -36,9 +36,8 @@ export default {
         </p>
       </div>
       <div class="iframe-wrapper">
-        <iframe width="600" height="335" src="https://www.youtube.com/embed/MTmMTcVibNw?si=yKZCu_ycrFt-CkAI&amp;start=01"
-                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="600" height="355" src="https://www.youtube.com/embed/3yByEnqQUMs?si=sF02LhG4CHeGTBD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
       </div>
     </div>
   </div>
